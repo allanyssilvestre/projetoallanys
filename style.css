@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{ /*Definir as configurações de cores, fonte e largura do site*/
+    /*PALETA DE CORES*/
+    --corfundo: #FFF;
+    --cortexto: #222;
+    --corprimaria: #0B2B40; /*Cor principal do site*/
+    --corsecundaria: #30A5BF; /*Cor secundária do site*/
+    --cordestaque: #22daf2; /*Cor para destaques do site*/
+
+    /*FONTES*/
+    --fontegeral: 'Open Sans', sans-serif; /*Fonte geral do site*/
+    --fontetitulos: 'Ubuntu', sans-serif; /*Fonte para títulos do site*/
+    --fontedestaque: 'Alkatra', cursive; /*Fonte especial para o site*/
+
+    /*LARGURAS*/
+    --larguramaxima: 1000px; /*Essa é a largura máxima do site*/
+    --larguraminima: 250px; /*Essa é a largura mínima do site*/
+}
+
+*{
+    margin: 0; /* MARGIN define as margens EXTERNAS */
+    padding: 0; /* PADDING é a margem INTERNA */
+}
+
+body{
+    background-color: var(--corfundo); /* Define a cor de fundo da página*/
+    font-family: var(--fontegeral); /*Define a fonte padrão do site*/
+}
+
+header, main, footer{ /*VOLTAR A PARTI DAQUI*/
+    max-width: var(--larguramaxima); /*Largura máxima do site*/
+    min-width: var(--larguraminima); /*Largura mínima*/
+    margin: auto;
+    position: relative;
+}
+
+#sociais{
+    position: absolute; /*move em relaçao ao objeto pai*/
+    width: 160px;
+    right: 20px; /*direita */
+    top: 20px; /*topo*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.social{
+    width: 35px; /*Largura dos icones das redes sociais*/
+    filter: invert(1) opacity(0.8);
+}
+
+.social:hover{
+    filter: invert(1) opacity(0.9) 
+}
+
+#capa{
+    width: 100%; /*Largura da Capa*/
+    height: 300px; /*Altura - Varia de projeto a projeto*/
+    background-image: url(images/bg-fantasia.jpg); /*Define uma imagem de plano de fundo*/
+    background-repeat: no-repeat; /*N~~ao repete a imagem*/
+    background-size: cover; /*Ajusta o tamnho da imagem*/
+    background-position: 0px 0px; /*Ajustaa posiç~~ao da imagem na div*/
+    display: flex; /*elementos internos flexiveis*/
+    flex-direction: column; /*um em cima do outro*/
+    justify-content: center; /*alinhamento vertical*/
+    align-items: center; /*alinhamento hotizontal*/
+}
+
+#capa h1{
+   color: var(--corfundo) ; /*cor da fonte*/
+   font-size: 2.3em; /*tamanho da fonte*/
+    font-family: var(--fontetitulos); /*a familia da fonte*/
+}
+#capa p{
+    color: var(--corfundo) ;
+    font-family: var(--fontetitulos) ;
+}
+
+#fotoperfil{
+    width: 100px; /*tamnho da foto*/
+    position: absolute; /*permite que a foto mude de lugar*/
+    left: 20px; /*desloca a foto pra direita*/
+    top: 203px; /*desloca a foto pra baixo*/
+    border-radius:20%; /*arredonda os cantos da foto*/
+}
+
+/*menu*/
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+#menu{
+   
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu a{ /*acesa os links dentro da div menu*/
+    text-decoration: none; /*retira a linha/sublinhado do texto*/
+    background-color: var(--corprimaria);
+    color: var(--corfundo);
+    padding: 10%; /*aumenta o  pixel em todos os lados*/
+    border-radius:10px;
+}
+
+#manu a:hover{
+    background-color: var(--cordestaque);
+    color: var(--cortexto);
+}
